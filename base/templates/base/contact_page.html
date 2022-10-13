@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<p>Contact Page</p>
+<li>
+</li>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+</form>
+
+{% endblock content %}
+
