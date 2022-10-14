@@ -1,18 +1,15 @@
-{% extends 'main.html' %}
+{% extends 'main.html' %} {% block content %}
 
-{% block content %}
+
 <p>Contact Page</p>
-<li>
-</li>
+<li></li>
 
 <h1>Contact Us!</h1>
 
-
-<form action="" method="POST">
-{% csrf_token %}
-    {{form.as_p}}
+<div class="contact-section">
+    <form action="" method="POST">
+    {% csrf_token %} {{form.as_p}}
     <button type="submit">Submit</button>
-</form>
-
+    </form>
+</div>
 {% endblock content %}
-
