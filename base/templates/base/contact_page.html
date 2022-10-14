@@ -5,9 +5,13 @@
 <li>
 </li>
 
+<h1>Contact Us!</h1>
+
+
 <form action="" method="POST">
-    {% csrf_token %}
+{% csrf_token %}
     {{form.as_p}}
+    <button type="submit">Submit</button>
 </form>
 
 {% endblock content %}

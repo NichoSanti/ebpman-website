@@ -17,12 +17,12 @@ def contact(request):
         if form.is_valid():
             subject = 'inquiry'
             body = {
-                'first_name': form.clean_data['first_name'],
-                'last_name': form.clean_data['last_name'],
-                'email_adress': form.clean_data['email_adress'],
-                'message': form.clean_data['message'],
+                'first_name': form.cleaned_data['first_name'],
+                'last_name': form.cleaned_data['last_name'],
+                'email_address': form.cleaned_data['email_address'],
+                'message': form.cleaned_data['message'],
             }
-            message = '/n'.join(body.values())
+            message = '\n'.join(body.values())
 
             try:
                 send_mail(subject, message, 'ebpman@test.com',
