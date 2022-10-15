@@ -1,8 +1,38 @@
-
-<nav>
-<a href="{% url 'home' %}" class="home">Ebpman Tech Reivews</a>
-<a href="https://www.youtube.com/c/ebpman" class="navlink__external">Channel</a>
-<a href="https://www.amazon.com/shop/ebpmantechreviews" class="navlink__external">Amazon Page</a>
-<a href="{% url 'about' %}" class="navlink__internal">About Page</a>
-<a href="{% url 'contact-page' %}" class="navlink__internal">Contact Us</a>
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+  <div class="container-fluid">
+    <a href="{% url 'home' %}" class="navbar-brand">Ebpman Tech Reivews</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a href="https://www.youtube.com/c/ebpman" class="nav-link"
+            >Channel</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://www.amazon.com/shop/ebpmantechreviews"
+            class="nav-link"
+            >My Amazon</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'about' %}" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'contact-page' %}" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
