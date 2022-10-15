@@ -1,7 +1,8 @@
 
-<!-- <img src="{% static 'images/logo.jpeg' %}" alt="logo"/> -->
-<a href="{% url 'home' %}">Ebpman Tech Reivews</a>
-<a href="https://www.youtube.com/c/ebpman">Channel</a>
-<a href="https://www.amazon.com/shop/ebpmantechreviews">Amazon Page</a>
-<a href="{% url 'about' %}">About Page</a>
-<a href="{% url 'contact-page' %}">Contact Us</a>
+<nav>
+<a href="{% url 'home' %}" class="home">Ebpman Tech Reivews</a>
+<a href="https://www.youtube.com/c/ebpman" class="navlink__external">Channel</a>
+<a href="https://www.amazon.com/shop/ebpmantechreviews" class="navlink__external">Amazon Page</a>
+<a href="{% url 'about' %}" class="navlink__internal">About Page</a>
+<a href="{% url 'contact-page' %}" class="navlink__internal">Contact Us</a>
+</nav>
