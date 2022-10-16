@@ -8,3 +8,7 @@ pip install -r requirements.txt
 ```
 python manage.py runserver
 ```
+
+### Virtualization
+```pip install virtualenv```
+```python install venv```
