@@ -4,3 +4,4 @@
   - Sponsors: creality, samsung, facebook meta
 - [ ] Socials Buttons
 - [ ] dev team photos - linkedn links
+- [ ] Local Bootstrap Libraries
