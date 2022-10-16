@@ -5,3 +5,6 @@
 - [ ] Socials Buttons
 - [ ] dev team photos - linkedn links
 - [ ] Local Bootstrap Libraries
+- [ ] About Page
+- [ ] Tik-Tok (or section to Tik-Tok embeds)
+- [ ] 
