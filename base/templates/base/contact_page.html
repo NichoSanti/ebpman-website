@@ -9,8 +9,10 @@
   <form action="" method="POST">
     {% csrf_token %} 
     {% bootstrap_form form %}
-    {% bootstrap_button button_type="submit" content="OK" %}
+    {% bootstrap_button button_type="submit" content="Confirm" %}
     {% bootstrap_button button_type="reset" content="Reset" %}
   </form>
 </div>
+
+
 {% endblock content %}

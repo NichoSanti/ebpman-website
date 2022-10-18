@@ -29,7 +29,7 @@ def contact(request):
                  ['ebpman@test.com'])
             except BadHeaderError:
                 return HttpResponse('invalid header found')
-            return redirect('home') 
+            return redirect('about') 
     form = ContactForm()    
     return render(request, 'base/contact_page.html', {'form':form})
 
