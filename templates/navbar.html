@@ -5,7 +5,7 @@
   <div class="container">
     <a
       class="navbar-brand text-white"
-      href=""
+      href="{% url 'home' %}"
       rel="tooltip"
       title="Designed and Coded by Creative Tim"
       data-placement="bottom"
@@ -48,7 +48,12 @@
         </li>
 
         <li class="nav-item px-2">
-          <a class="nav-link text-white opacity-8"> Blocks </a>
+          <a
+            href="{% url 'contact-page' %}"
+            class="nav-link text-white opacity-8"
+          >
+            Contact Us
+          </a>
         </li>
 
         <li class="nav-item px-2">
@@ -63,7 +68,7 @@
           data-bs-toggle="modal"
           data-bs-target="#exampleModalMessage"
         >
-          Message Modal
+          Contact Us!
         </button>
       </ul>
     </div>
