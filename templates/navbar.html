@@ -3,14 +3,7 @@
   class="navbar navbar-expand-lg navbar-dark bg-gradient-dark z-index-3 py-3"
 >
   <div class="container">
-    <a
-      class="navbar-brand text-white"
-      href="{% url 'home' %}"
-      rel="tooltip"
-      title="Designed and Coded by Creative Tim"
-      data-placement="bottom"
-      target="_blank"
-    >
+    <a class="navbar-brand text-white" href="{% url 'home' %}">
       <img
         src="static/images/ebpmanbanner.png"
         style="width: 250px; height: 80px"
@@ -31,7 +24,7 @@
       class="collapse navbar-collapse d-flex-block justify-content-end"
       id="navigation"
     >
-      <ul class="navbar-nav navbar-nav-hover">
+      <ul class="navbar-nav navbar-nav-hover mx-auto">
         <li class="nav-item px-2">
           <a
             href="https://www.amazon.com/shop/ebpmantechreviews"
@@ -60,7 +53,9 @@
         </li>
 
         <li class="nav-item px-2">
-          <a class="nav-link text-white opacity-8"> Docs </a>
+          <a href="{% url 'about' %}" class="nav-link text-white opacity-8">
+            About
+          </a>
         </li>
       </ul>
 
