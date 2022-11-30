@@ -1,47 +1,107 @@
-<nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
-  <div class="container-fluid">
-    <a href="{% url 'home' %}" class="navbar-brand">
-      <!-- <img
-        src="https://i.pinimg.com/280x280_RS/53/d0/de/53d0de0355656995c887d2781bab8219.jpg"
-        alt="Ebpman Tech Reivews"
-        width="89"
-        height="89"
-        class="d-inline-block align-text-top"
-      /> -->
-      Ebpman Tech Reviews
+<!-- Navbar Dark -->
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-gradient-dark z-index-3 py-3"
+>
+  <div class="container">
+    <a class="navbar-brand text-white" href="{% url 'home' %}">
+      <img
+        src="static/images/ebpmanbanner.png"
+        style="width: 250px; height: 80px"
+      />
     </a>
     <button
       class="navbar-toggler"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
+      data-toggle="collapse"
+      data-target="#navigation"
+      aria-controls="navigation"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a href="https://www.youtube.com/c/ebpman" class="nav-link"
-            >Channel</a
-          >
-        </li>
-        <li class="nav-item">
+    <div
+      class="collapse navbar-collapse d-flex-block justify-content-end"
+      id="navigation"
+    >
+      <ul class="navbar-nav navbar-nav-hover mx-auto">
+        <!-- <li class="nav-item px-2">
           <a
             href="https://www.amazon.com/shop/ebpmantechreviews"
-            class="nav-link"
-            >My Amazon</a
+            class="nav-link text-white opacity-8"
           >
+            Amazon
+          </a>
         </li>
-        <li class="nav-item">
-          <a href="{% url 'about' %}" class="nav-link">About</a>
+
+        <li class="nav-item px-2">
+          <a
+            href="https://www.youtube.com/watch?v=mrIOCFtJ-1o"
+            class="nav-link text-white opacity-8"
+          >
+            YouTube
+          </a>
         </li>
-        <li class="nav-item">
-          <a href="{% url 'contact-page' %}" class="nav-link">Contact</a>
+
+        <li class="nav-item px-2">
+          <a
+            href="{% url 'contact-page' %}"
+            class="nav-link text-white opacity-8"
+          >
+            Contact Us
+          </a>
         </li>
+
+        <li class="nav-item px-2">
+          <a href="{% url 'about' %}" class="nav-link text-white opacity-8">
+            About
+          </a>
+        </li> -->
+      </ul>
+
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item px-2">
+          <a
+            href="https://www.amazon.com/shop/ebpmantechreviews"
+            class="nav-link text-white opacity-8"
+          >
+            Amazon
+          </a>
+        </li>
+
+        <li class="nav-item px-2">
+          <a
+            href="https://www.youtube.com/watch?v=mrIOCFtJ-1o"
+            class="nav-link text-white opacity-8"
+          >
+            YouTube
+          </a>
+        </li>
+
+        <li class="nav-item px-2">
+          <a
+            href="{% url 'contact-page' %}"
+            class="nav-link text-white opacity-8"
+          >
+            Contact Us
+          </a>
+        </li>
+
+        <li class="nav-item px-2">
+          <a href="{% url 'about' %}" class="nav-link text-white opacity-8">
+            About
+          </a>
+        </li>
+        <button
+          type="button"
+          class="btn bg-gradient-success btn-block mb-3"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModalMessage"
+        >
+          Contact Us!
+        </button>
       </ul>
     </div>
   </div>
 </nav>
+<!-- End Navbar -->

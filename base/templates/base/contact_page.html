@@ -1,13 +1,12 @@
 {% extends 'main.html' %} {% block content %}
 
-<p>Contact Page</p>
+<!-- <h1>Contact Us!</h1> -->
 
-<h1>Contact Us!</h1>
-
-<div class="contact-section">
+<div class="form-group">
   <form action="" method="POST">
     {% csrf_token %} {{form.as_p}}
     <button class="btn btn-primary" type="submit">Submit</button>
   </form>
 </div>
+
 {% endblock content %}
