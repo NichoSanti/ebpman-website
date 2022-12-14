@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ebpman Tech Reviewer</title>
 
@@ -20,11 +20,11 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     /> -->
-    <link
+    <!-- <link
       href="{% static 'bootstrap/css/bootstrap.css' %}"
       rel="stylesheet"
       type="text/css"
-    />
+    /> -->
 
     <!-- JavaScript Bundle with Popper -->
     <!-- <script
@@ -39,8 +39,9 @@
     <!-- Material Kit -->
     <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
       rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
     />
 
     <!-- Icons -->
@@ -53,19 +54,21 @@
     <!-- Theme CSS -->
     <link
       type="text/css"
-      href="{% static 'assets/css/material-kit.min.css' %}"
+      href="{% static 'assets/css/material-kit.css' %}"
       rel="stylesheet"
     />
   </head>
-  <body style="background-color: #7b809a">
-    {% include 'navbar.html' %}
-    <div class="container d-flex justify-content-center">
-      {% block content %} {% endblock content %}
-    </div>
+  <body style="background-color: #495057">
+    {% include 'navbar.html' %} {% block content %} {% endblock content %}
 
     <!-- Put Modal Here-->
     {% include 'modal.html' %}
-    <!-- Core -->
+
+    <!-- -->
+
+    <!-- Footer -->
+
+    <!-- Core JS -->
     <script src="{% static 'assets/js/core/popper.min.js' %}"></script>
     <script src="{% static 'assets/js/core/bootstrap.min.js' %}"></script>
 

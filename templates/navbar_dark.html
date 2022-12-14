@@ -1,6 +1,6 @@
-<!-- Navbar Transparent -->
+<!-- Navbar Dark -->
 <nav
-  class="navbar navbar-expand-lg top-0 z-index-3 w-100 shadow-none my-3 navbar-transparent"
+  class="navbar navbar-expand-lg navbar-dark bg-gradient-dark z-index-3 py-3"
 >
   <div class="container">
     <a
@@ -22,31 +22,36 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </span>
     </button>
-    <div class="collapse navbar-collapse" id="navigation">
-      <ul class="navbar-nav navbar-nav-hover mx-auto">
-        <li class="nav-item px-3">
-          <a class="nav-link"> Pages </a>
+    <div
+      class="collapse navbar-collapse d-flex-block justify-content-end"
+      id="navigation"
+    >
+      <ul class="navbar-nav navbar-nav-hover">
+        <li class="nav-item px-2">
+          <a class="nav-link text-white opacity-8"> Pages </a>
         </li>
 
-        <li class="nav-item px-3">
-          <a class="nav-link"> Utilities </a>
+        <li class="nav-item px-2">
+          <a class="nav-link text-white opacity-8"> Utilities </a>
         </li>
 
-        <li class="nav-item px-3">
-          <a class="nav-link"> Blocks </a>
+        <li class="nav-item px-2">
+          <a class="nav-link text-white opacity-8"> Blocks </a>
         </li>
 
-        <li class="nav-item px-3">
-          <a class="nav-link"> Docs </a>
+        <li class="nav-item px-2">
+          <a class="nav-link text-white opacity-8"> Docs </a>
         </li>
       </ul>
 
       <ul class="navbar-nav ms-auto">
         <button
           type="button"
-          class="btn btn-white mb-0"
+          class="btn bg-gradient-success btn-block mb-3"
           data-bs-toggle="modal"
           data-bs-target="#exampleModalMessage"
         >
