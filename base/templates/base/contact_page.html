@@ -1720,13 +1720,15 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <div class="card card-plain">
-              <form id="contact-form" method="post" autocomplete="off">
+              <form action="" method="POST">
+                {% csrf_token %}
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="input-group input-group-static mb-4">
                         <label>Full Name</label>
                         <input
+                          id="first_name"
                           type="text"
                           class="form-control"
                           placeholder="Full Name"
@@ -1740,6 +1742,7 @@
                       <div class="input-group input-group-static mb-4">
                         <label>Email</label>
                         <input
+                          id="email_address"
                           type="email"
                           class="form-control"
                           placeholder="Email"
