@@ -1720,9 +1720,13 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <div class="card card-plain">
-              <form action="" method="POST">
+              <form class="form" action="" method="POST">
                 {% csrf_token %}
-                <div class="card-body">
+                <form action="" method="post">
+                  {% csrf_token %} {{ form.as_p }}
+                  <input type="submit" value="Submit" />
+                </form>
+                <!-- <div class="card-body">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="input-group input-group-static mb-4">
@@ -1781,12 +1785,16 @@
                   </div>
                   <div class="row">
                     <div class="col-md-12 text-center">
-                      <button type="submit" class="btn bg-gradient-info mt-4">
+                      <button
+                        type="submit"
+                        value="submit"
+                        class="btn bg-gradient-info mt-4"
+                      >
                         Send Message
                       </button>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </form>
             </div>
           </div>

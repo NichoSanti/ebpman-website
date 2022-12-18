@@ -15,6 +15,7 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
+            form.save()
             subject = 'inquiry'
             body = {
                 'first_name': form.cleaned_data['first_name'],
@@ -23,7 +24,6 @@ def contact(request):
                 'message': form.cleaned_data['message'],
             }
             message = '\n'.join(body.values())
-
             try:
                 send_mail(subject, message, 'ebpman@test.com',
                  ['ebpman@test.com'])
@@ -32,6 +32,9 @@ def contact(request):
             return redirect('home') 
     form = ContactForm()    
     return render(request, 'base/contact_page.html', {'form':form})
+
+
+
 
 
 
