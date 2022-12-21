@@ -1,13 +1,15 @@
 <!-- Navbar Dark -->
-<nav
-  class="navbar navbar-expand-lg navbar-dark bg-gradient-dark z-index-3 py-3"
->
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent z-index-3 py-3">
   <div class="container">
-    <a class="navbar-brand text-white" href="{% url 'home' %}">
-      <img
-        src="static/images/ebpmanbanner.png"
-        style="width: 250px; height: 80px"
-      />
+    <a
+      class="navbar-brand text-white"
+      href=""
+      rel="tooltip"
+      title="Designed and Coded by Creative Tim"
+      data-placement="bottom"
+      target="_blank"
+    >
+      Material Kit
     </a>
     <button
       class="navbar-toggler"
@@ -20,86 +22,27 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div
-      class="collapse navbar-collapse d-flex-block justify-content-end"
-      id="navigation"
-    >
+    <div class="collapse navbar-collapse" id="navigation">
       <ul class="navbar-nav navbar-nav-hover mx-auto">
-        <!-- <li class="nav-item px-2">
-          <a
-            href="https://www.amazon.com/shop/ebpmantechreviews"
-            class="nav-link text-white opacity-8"
-          >
-            Amazon
-          </a>
+        <li class="nav-item px-3">
+          <a class="nav-link text-white opacity-8"> Pages </a>
         </li>
 
-        <li class="nav-item px-2">
-          <a
-            href="https://www.youtube.com/watch?v=mrIOCFtJ-1o"
-            class="nav-link text-white opacity-8"
-          >
-            YouTube
-          </a>
+        <li class="nav-item px-3">
+          <a class="nav-link text-white opacity-8"> Utilities </a>
         </li>
 
-        <li class="nav-item px-2">
-          <a
-            href="{% url 'contact-page' %}"
-            class="nav-link text-white opacity-8"
-          >
-            Contact Us
-          </a>
+        <li class="nav-item px-3">
+          <a class="nav-link text-white opacity-8"> Blocks </a>
         </li>
 
-        <li class="nav-item px-2">
-          <a href="{% url 'about' %}" class="nav-link text-white opacity-8">
-            About
-          </a>
-        </li> -->
+        <li class="nav-item px-3">
+          <a class="nav-link text-white opacity-8"> Docs </a>
+        </li>
       </ul>
 
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item px-2">
-          <a
-            href="https://www.amazon.com/shop/ebpmantechreviews"
-            class="nav-link text-white opacity-8"
-          >
-            Amazon
-          </a>
-        </li>
-
-        <li class="nav-item px-2">
-          <a
-            href="https://www.youtube.com/watch?v=mrIOCFtJ-1o"
-            class="nav-link text-white opacity-8"
-          >
-            YouTube
-          </a>
-        </li>
-
-        <li class="nav-item px-2">
-          <a
-            href="{% url 'contact-page' %}"
-            class="nav-link text-white opacity-8"
-          >
-            Contact Us
-          </a>
-        </li>
-
-        <li class="nav-item px-2">
-          <a href="{% url 'about' %}" class="nav-link text-white opacity-8">
-            About
-          </a>
-        </li>
-        <button
-          type="button"
-          class="btn bg-gradient-success btn-block mb-3"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModalMessage"
-        >
-          Contact Us!
-        </button>
+        <button class="btn bg-gradient-primary mb-0">Buy Now</button>
       </ul>
     </div>
   </div>
