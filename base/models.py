@@ -8,4 +8,4 @@ class Contact(models.Model):
     created = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):
-        return self.email_address
+        return self.email_address, self.first_name, self.last_name
