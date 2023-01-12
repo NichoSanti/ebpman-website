@@ -1,12 +1,4 @@
-# class Contact(models.Model):
-#     first_name = models.CharField(max_length = 50, null=True)
-#     last_name = models.CharField(max_length = 50, null=True)
-#     email_address = models.EmailField(max_length = 150, null=True)
-#     message = models.TextField(max_length = 1000, null=True)
-#     created = models.DateTimeField(auto_now_add=True, null=True)
 
-#     def __str__(self):
-#         return self.email_address
 
 
 from base.models import Contact   
@@ -19,7 +11,13 @@ class ContactModelTest(TestCase):
     
     def test_email_address_length(self):
         contact = Contact.objects.get(id=1)
-        max_length = Contact._meta.get_field('email_address').max_length
+        max_length = contact._meta.get_field('email_address').max_length
         self.assertEqual(max_length, 150)
+    
+    def test_first_name_length(self):
+        contact = Contact.objects.get(id=1)
+        max_length = contact._meta.get_field('first_name').max_length
+        self.assertEqual(max_length, 50)
          
+
 
