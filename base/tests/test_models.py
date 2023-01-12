@@ -3,7 +3,7 @@
 
 from base.models import Contact   
 from django.test import TestCase
-class ContactModelTest(TestCase): 
+class ContactModelTest_length(TestCase): 
 
     @classmethod
     def setUpTestData(cls): 
@@ -27,6 +27,9 @@ class ContactModelTest(TestCase):
     def test_message_length(self):
         contact = Contact.objects.get(id=1)
         max_length = contact._meta.get_field("message").max_length
-        self.assertEqual(max_length, 50)
-        
+        self.assertEqual(max_length, 100)
+
+
+
+
 
