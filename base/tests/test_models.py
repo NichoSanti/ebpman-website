@@ -24,3 +24,9 @@ class ContactModelTest(TestCase):
         max_length = contact._meta.get_field('last_name').max_length
         self.assertEqual(max_length, 50)
 
+    def test_message_length(self):
+        contact = Contact.objects.get(id=1)
+        max_length = contact._meta.get_field("message").max_length
+        self.assertEqual(max_length, 50)
+        
+
