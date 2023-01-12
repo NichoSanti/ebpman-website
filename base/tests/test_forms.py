@@ -21,10 +21,3 @@ class TestContactForm(TestCase):
         self.assertIn("email_address", form.fields)
         self.assertIn("message", form.fields)
 
-    # def test_it_hides_date_field_for_regular_users(self):
-    #     contact = ContactForm.objects.create_user(
-    #         first_name="funny",
-    #         last_name="man",
-    #         email_address="just-for-testing@testing.com",
-    #         message="dummy-insecure",
-    #     )
