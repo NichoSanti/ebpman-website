@@ -4,14 +4,18 @@ class TestContactForm(TestCase):
 
     def test_is_valid(self):
         form_data = ContactForm(data=
-                    {'first_name': 'john', 'last_name': 'smith',
-                     'email_address': 'test@gmail.com', 'message':'This is a test'})
+                    {'first_name': 'john',
+                     'last_name': 'smith',
+                     'email_address': 'test@gmail.com',
+                     'message':'This is a test'})
         self.assertTrue(form_data.is_valid())
 
     def test_is_invalid(self):
         form_data = ContactForm(data=
-                    {'first_name': 'john', 'last_name': 'smith',
-                     'email_address': 123, 'message': 'This is a test'})
+                    {'first_name': 'john',
+                     'last_name': 'smith',
+                     'email_address': 123,
+                     'message': 'This is a test'})
         self.assertFalse(form_data.is_valid())
 
     def test_empty_form(self):
