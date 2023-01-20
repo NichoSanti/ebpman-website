@@ -7,5 +7,8 @@ class Contact(models.Model):
     message = models.TextField(max_length = 1000, null=True)
     created = models.DateTimeField(auto_now_add=True, null=True)
 
+    class Meta:
+        ordering = ['-created']
+
     def __str__(self):
-        return self.email_address, self.first_name, self.last_name
+        return (self.email_address, self.message[0:50])
