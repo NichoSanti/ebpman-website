@@ -11,4 +11,4 @@ class Contact(models.Model):
         ordering = ['-created']
 
     def __str__(self):
-        return (self.email_address, self.message[0:50])
+        return self.first_name
