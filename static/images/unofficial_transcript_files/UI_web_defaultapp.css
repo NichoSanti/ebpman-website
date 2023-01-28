@@ -1,0 +1,32 @@
+@import url("/css/web_defaultapp.css");
+@import url("/UI_css/commonchanges.css");
+
+/*
+
+  FILE NAME..: UI_web_defaultapp.UIC.css
+  RELEASE....: UI_9039_TWB70300_2
+  PRODUCT....: WTLWEB
+  DESCRIPTION: customizations for UIC campus
+
+AUDIT TRAIL: UI_9039_TWB70300_2         21-JAN-2009
+  1. added UIC tagline image to header
+  
+*/
+  
+DIV.pageheaderdiv1 {
+  margin-top: 0%;
+  display: block;
+  position: absolute;
+  top: 0px; 
+  right: 0px;
+  float: right;
+  background-image: url(/UI_images/Sample-Bluestem_Logo_words.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  height: 88px;
+  width: 322px;
+}
+
+H1 {
+  display: none;
+}
