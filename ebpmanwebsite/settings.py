@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
     'embed_video',
+    'admin_honeypot',
 ]
 
 MIDDLEWARE = [
