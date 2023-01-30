@@ -1,4 +1,4 @@
-{% extends 'main.html' %} {% block content %}
+{% extends 'main.html' %} {% block content %} {% load honeypot %}
 
 <body class="contact-us-simple bg-gray-200">
   <section class="position-relative">
@@ -71,9 +71,9 @@
           <div class="col-lg-8 mx-auto">
             <div class="card card-plain">
               <form class="form" action="" method="POST">
-                {% csrf_token %}
                 <form action="" method="post">
-                  {% csrf_token %} {{ form.as_p }}
+                  {% render_honeypot_field "contact-page" %} {% csrf_token %} {{
+                  form.as_p }}
                   <input type="submit" value="Submit" />
                 </form>
                 <!-- <div class="card-body">

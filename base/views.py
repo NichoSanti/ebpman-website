@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail, BadHeaderError
 from .forms import ContactForm
 from django.http import HttpResponse
+from honeypot.decorators import check_honeypot
 
 def home(request):
     context =  {}
@@ -11,6 +12,7 @@ def about(request):
     context = {}
     return render(request, 'base/about.html', context)
 
+@check_honeypot(field_name='contact-page')
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
 import environ
 import os
 
@@ -52,6 +51,7 @@ INSTALLED_APPS = [
     'base.apps.BaseConfig',
     'embed_video',
     'admin_honeypot',
+    'honeypot',
 ]
 
 MIDDLEWARE = [
