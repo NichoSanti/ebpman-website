@@ -1,5 +1,4 @@
-{% extends 'main.html' %} {% block content %} {% load honeypot %}
-
+{% extends 'main.html' %} {% block content %} {% load crispy_forms_tags %} {% load honeypot %}
 <body class="contact-us-simple bg-gray-200">
   <section class="position-relative">
     <div
@@ -13,8 +12,8 @@
           <div class="col-lg-6 text-center mx-auto">
             <h2 class="text-white mb-3">Looking to work with us?</h2>
             <p class="lead text-white mb-6">
-              We always want to hear from you! Let us know if there is anything
-              that we can help you with.
+              We always want to hear from you! Let us know if there is anything that we can help you
+              with.
             </p>
           </div>
         </div>
@@ -26,27 +25,21 @@
       <div class="row mt-sm-0 mt-5">
         <div class="col-lg-3 col-md-4 position-relative ms-lg-auto">
           <div class="p-3 text-center border-right-after">
-            <i class="material-icons text-gradient text-info text-5xl mb-3"
-              >email</i
-            >
+            <i class="material-icons text-gradient text-info text-5xl mb-3">email</i>
             <h6 class="mb-0">Email</h6>
             <p class="text-dark font-weight-normal">ebpmantest@gmail.com</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 position-relative">
           <div class="p-3 text-center border-right-after">
-            <i class="material-icons text-gradient text-info text-5xl mb-3"
-              >call</i
-            >
+            <i class="material-icons text-gradient text-info text-5xl mb-3">call</i>
             <h6 class="mb-0">Phone</h6>
             <p class="text-dark font-weight-normal">+1(424) 535 3523</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 me-lg-auto">
           <div class="p-3 text-center">
-            <i class="material-icons text-gradient text-info text-5xl mb-3"
-              >contacts</i
-            >
+            <i class="material-icons text-gradient text-info text-5xl mb-3">contacts</i>
             <h6 class="mb-0">Contact</h6>
             <p class="text-dark font-weight-normal">Milton Santiago</p>
           </div>
@@ -60,9 +53,8 @@
             <div class="mb-md-5">
               <h3>Contact us</h3>
               <p>
-                For further questions, including partnership opportunities,
-                please email ebpmantest@gmail.com or contact using our contact
-                form.
+                For further questions, including partnership opportunities, please email
+                ebpmantest@gmail.com or contact using our contact form.
               </p>
             </div>
           </div>
@@ -70,81 +62,10 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <div class="card card-plain">
-              <form class="form" action="" method="POST">
-                <form action="" method="post">
-                  {% render_honeypot_field "contact-page" %} {% csrf_token %} {{
-                  form.as_p }}
-                  <input type="submit" value="Submit" />
-                </form>
-                <!-- <div class="card-body">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="input-group input-group-static mb-4">
-                        <label>First Name</label>
-                        <input
-                          id="first_name"
-                          type="text"
-                          class="form-control"
-                          placeholder="First Name"
-                        />
-                        <span class="input-group-text"
-                          ><i class="material-icons">person</i></span
-                        >
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-group input-group-static mb-4">
-                        <label>Last Name</label>
-                        <input
-                          id="last_name"
-                          type="text"
-                          class="form-control"
-                          placeholder="Last Name"
-                        />
-                        <span class="input-group-text"
-                          ><i class="material-icons">person</i></span
-                        >
-                      </div>
-                    </div>
-                    <div class="col-md-6 ps-md-2">
-                      <div class="input-group input-group-static mb-4">
-                        <label>Email</label>
-                        <input
-                          id="email_address"
-                          type="email"
-                          class="form-control"
-                          placeholder="Email"
-                        />
-                        <span class="input-group-text"
-                          ><i class="material-icons">email</i></span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group mb-4 mt-md-0 mt-4">
-                    <div class="input-group input-group-static mb-4">
-                      <label>What can we do to help you?</label>
-                      <textarea
-                        name="message"
-                        class="form-control"
-                        id="message"
-                        rows="6"
-                        placeholder="Describe your problem in at least 250 characters"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 text-center">
-                      <button
-                        type="submit"
-                        value="submit"
-                        class="btn bg-gradient-info mt-4"
-                      >
-                        Send Message
-                      </button>
-                    </div>
-                  </div>
-                </div> -->
+              <form method="POST">
+                {% csrf_token %} {% crispy form %}
+                <input type="submit" value="Submit" />
+                {% render_honeypot_field "hpcontact" %}
               </form>
             </div>
           </div>
@@ -153,35 +74,22 @@
     </section>
   </div>
 
-  <!-- ---- END FOOTER 4 dark w/ 2 cols ---- -->
   <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
-  <script
-    src="../assets/js/core/bootstrap.min.js"
-    type="text/javascript"
-  ></script>
+  <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
   <!--  Plugin for TypedJS, full documentation here: https://github.com/mattboldt/typed.js/ -->
   <script src="../assets/js/plugins/typedjs.js"></script>
   <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
   <script src="../assets/js/plugins/parallax.min.js"></script>
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-  <script
-    src="../assets/js/plugins/nouislider.min.js"
-    type="text/javascript"
-  ></script>
+  <script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
   <!--  Plugin for the blob animation -->
-  <script
-    src="../assets/js/plugins/anime.min.js"
-    type="text/javascript"
-  ></script>
+  <script src="../assets/js/plugins/anime.min.js" type="text/javascript"></script>
   <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-  <script
-    src="../assets/js/material-kit-pro.min.js?v=3.0.3"
-    type="text/javascript"
-  ></script>
+  <script src="../assets/js/material-kit-pro.min.js?v=3.0.3" type="text/javascript"></script>
   <script>
     if (document.getElementsByClassName("page-header")) {
       window.onscroll = debounce(function () {

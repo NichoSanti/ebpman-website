@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'embed_video',
     'admin_honeypot',
     'honeypot',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -84,6 +85,7 @@ TEMPLATES = [
     },
 ]
 
+# CRISPY_TEMPLATE_PACK = 'uni_form'
 
 WSGI_APPLICATION = 'ebpmanwebsite.wsgi.application'
 

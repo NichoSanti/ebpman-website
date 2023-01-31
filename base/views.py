@@ -12,7 +12,7 @@ def about(request):
     context = {}
     return render(request, 'base/about.html', context)
 
-@check_honeypot(field_name='contact-page')
+@check_honeypot(field_name='hpcontact')
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
