@@ -6,9 +6,10 @@ class Contact(models.Model):
     email_address = models.EmailField(max_length = 150, null=True)
     message = models.TextField(max_length = 1000)
     created = models.DateTimeField(auto_now_add=True, null=True)
+    
 
     class Meta:
         ordering = ['-created']
 
     def __str__(self):
-        return self.email_address, self.message[0:50]
+        return f"{self.email_address} {self.message}"

@@ -1,4 +1,4 @@
-{% extends 'main.html' %} {% block content %} {% load crispy_forms_tags %} {% load honeypot %}
+{% extends 'main.html' %} {% block content %} {% load crispy_forms_tags %}
 <body class="contact-us-simple bg-gray-200">
   <section class="position-relative">
     <div
@@ -62,10 +62,9 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <div class="card card-plain">
-              <form method="POST">
-                {% csrf_token %} {% crispy form %}
-                <input type="submit" value="Submit" />
-                {% render_honeypot_field "hpcontact" %}
+              <form id="id-personal-data-form" action="contact-page" method="POST">
+                {% csrf_token %} {{ form.as_p }}
+                <button type="submit" value="Submit">Submit</button>
               </form>
             </div>
           </div>
