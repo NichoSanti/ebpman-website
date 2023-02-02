@@ -38,7 +38,7 @@ class ContactForm(forms.ModelForm):
             'Subject here',
             message,
             settings.DEFAULT_FROM_EMAIL,
-            ['to@example.com'],
+            ['Ebpman@test.com'],
             fail_silently=False,
         )
 
