@@ -35,7 +35,7 @@ class ContactForm(forms.ModelForm):
             message=message,
         )
         send_mail(
-            'Subject here',
+            'Contact Details',
             message,
             settings.DEFAULT_FROM_EMAIL,
             ['Ebpman@test.com'],
