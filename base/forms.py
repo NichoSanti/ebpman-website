@@ -26,12 +26,12 @@ class ContactForm(forms.ModelForm):
     def send_mail(self):
         first_name = self.cleaned_data['first_name']
         last_name = self.cleaned_data['last_name']
-        email = self.cleaned_data['email_address']
+        email_address = self.cleaned_data['email_address']
         message = self.cleaned_data['message']
-        message = 'Message from {first_name} {last_name} <{email}>:\n\n{message}'.format(
+        message = 'Message from {first_name} {last_name} <{email_address}>:\n\n{message}'.format(
             first_name=first_name,
             last_name=last_name,
-            email=email,
+            email_address=email_address,
             message=message,
         )
         send_mail(

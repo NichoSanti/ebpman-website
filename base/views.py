@@ -1,9 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .forms import ContactForm
 from django.http import HttpResponseRedirect
 
 def home(request):
-    context =  {}
+    context = {}
     return render(request,'base/home.html', context)
 
 def about(request):
