@@ -63,7 +63,7 @@
           <div class="col-lg-8 mx-auto">
             <div class="card card-plain">
               <form id="id-personal-data-form" action="contact-page" method="POST">
-                {% csrf_token %} {{ form.as_p }}
+                {% csrf_token %} {{ form|crispy }}
                 <button type="submit" value="Submit">Submit</button>
               </form>
             </div>

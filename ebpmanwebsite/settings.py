@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'base.apps.BaseConfig',
     'embed_video',
     'admin_honeypot',
-    'honeypot',
     'crispy_forms',
 ]
 
@@ -86,7 +85,7 @@ TEMPLATES = [
 ]
 
 
-# CRISPY_TEMPLATE_PACK = 'bootstrap'
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
 WSGI_APPLICATION = 'ebpmanwebsite.wsgi.application'
 
